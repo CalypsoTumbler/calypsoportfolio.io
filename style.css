@@ -1,0 +1,148 @@
+#header {
+	background: #000000;
+}
+a{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+}
+span {
+    color: #71e215;
+}
+.navbar {
+    background-color: black;
+}
+.navbar-brand {
+    font-size: 28px;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+}
+.navbar-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.navbar-nav {
+    margin-bottom: 10px;
+}
+.nav-item {
+    margin-right: 30px;
+}
+
+
+
+
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    
+    background:  #5c9f24;
+    transition: width .3s;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    font-weight: 400;
+}
+.nav-link:hover{
+    color: #fff;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    transition: width .3s;
+    
+}
+.active .nav-link{
+    color: #fff;
+}
+.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background:  #5c9f24;
+    transition: width .3s;
+}
+.let-talk-btn {
+	background-color: #71e215;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 7px 15px 7px;
+    margin-top: 10px;
+	border-radius: 20px;
+	transition: .4s;
+}
+.let-talk-btn:hover{
+	background-color: transparent;
+	color: white;
+	border: 2px solid #71e215;
+	cursor: pointer;
+}
+.offcanvas {
+    background-color: black;
+}
+
+/* Hero Section */
+.content{
+	padding-top: 15rem;
+	position: relative;
+	top: 50%;
+	left: 8%;
+	transform: translateY(-30%);
+}
+.newsletter form{
+	width: 380px;
+	max-width: 100%;
+	position: relative;
+}
+.newsletter form input:first-child{
+	display: inline-block;
+	width: 100%;
+	padding: 14px 130px 14px 15px;
+	border: 2px solid #FFCC00;
+	outline: none;
+	border-radius: 30px;
+}
+.newsletter form input:last-child{
+	position: absolute;
+	display: inline-block;
+	outline: none;
+	border: none;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background-color: #71e215;
+	color: white;
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+	top: 6px;
+	right: 6px;
+	cursor: pointer;
+}
+.content h1 {
+    color: white;
+	margin: 20px 0px 20px;
+	font-size: 55px;
+}
+.content h3 {
+    color: white;
+	font-size: 25px;
+	margin-bottom: 50px;
+}
+.content h4 {
+    color: #FAF5E9;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
