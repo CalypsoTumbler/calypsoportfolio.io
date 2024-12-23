@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calypso Portfolio</title>
+    <title>Helmut Portfolio</title>
     <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
@@ -50,7 +51,7 @@
     </header>
 
     <main>
-        <section id="home" class="hero-section container-fluid p-5 my-5 bg-dark">
+        <section id="home" class="hero-section container-fluid bg-dark">
             <div class="content">
                 <h4>Hello, my name is</h4>
                 <h1>Helmut <span>Felix</span> Essien</h1>
@@ -59,7 +60,7 @@
             </div>
         </section>
 
-        <section class="about-section container-fluid p-5 my-5 bg-dark">
+        <section class="about-section container-fluid bg-dark">
             <div class="row">
                 <div class="col-sm">
                     <img class="img-fluid" src="M12.jpg" srcset="M12-small.jpg 300w, M12-medium.jpg 600w, M12.jpg 1200w" sizes="(max-width: 300px) 300px, (max-width: 600px) 600px, 1200px" alt="Helmut Essien's portrait">
@@ -76,32 +77,29 @@
                 </div>
             </div>
         </section>
-        <section id="services" class="services-section container-fluid p-5 my-5 bg-dark text-light">
+        <section id="services" class="services-section container-fluid my-5 text-light">
             <div class="container">
-                <h2 class="text-center mb-5">My <span>Services</span></h2>
+                <h2 class="text-center mb-5 service-title">My <span>Services</span></h2>
                 <div class="row">
                     <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light border-0">
-                            <div class="card-body">
-                                <h5 class="card-title">Web Development</h5>
-                                <p class="card-text">Full-stack development with a focus on .NET technologies. From front-end to back-end, I ensure your website is both beautiful and functional.</p>
-                            </div>
+                        <div class="service-card">
+                            <i class="fas fa-code service-icon"></i>
+                            <h5 class="service-name">Web Development</h5>
+                            <p class="service-desc">Full-stack development with a focus on .NET technologies.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light border-0">
-                            <div class="card-body">
-                                <h5 class="card-title">UI/UX Design</h5>
-                                <p class="card-text">Crafting intuitive and appealing interfaces that enhance user experience while adhering to the latest design trends.</p>
-                            </div>
+                        <div class="service-card">
+                            <i class="fas fa-palette service-icon"></i>
+                            <h5 class="service-name">UI/UX Design</h5>
+                            <p class="service-desc">Crafting intuitive and appealing interfaces.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light border-0">
-                            <div class="card-body">
-                                <h5 class="card-title">Responsive Design</h5>
-                                <p class="card-text">Ensuring your website looks great on all devices, from mobile to desktop, with responsive layouts and optimized performance.</p>
-                            </div>
+                        <div class="service-card">
+                            <i class="fas fa-lightbulb service-icon"></i>
+                            <h5 class="service-name">Responsive Design</h5>
+                            <p class="service-desc">Ensuring your website looks great on all devices.</p>
                         </div>
                     </div>
                 </div>
