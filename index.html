@@ -1,99 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Calypso Portfolio</title>
-	<link href="bootstrap.min.css" rel="stylesheet">
-	<link href="style.css" rel="stylesheet">
-	
-	<link href="all.css" rel="stylesheet">
-	
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calypso Portfolio</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
-	<header id="header" class="fixed-top">
-			<!-----Navigation Menu---->
-			<nav class="navbar navbar-expand-xl navbar-dark">
-				<div class="container">
-				  <a href="#" class="navbar-brand ps-3"><h2>PORTFO<span>LIO</span></h2></a>
-				  <button class="navbar-toggler" type="button"
-					data-bs-toggle="offcanvas" 
-					data-bs-target="#navbarOffcanvas"
-					aria-controls="navbarOffcanvas"
-					aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				  </button>
-				  <div class="offcanvas offcanvas-end" id="navbarOffcanvas"
-					  tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
-					  <div class="offcanvas-header">
-						<h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">PORTFO<span>LIO</span></h5>
-						<button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					  </div>
-					  <div class="offcanvas-body">          
-						<div class="navbar-nav justify-content-end flex-grow-1 pe-3">
-							<ul class="navbar-nav">
-								<li class="nav-item active">
-								  <a class="nav-link" href="#">Home</a>
-								</li>
-								<li class="nav-item">
-								  <a class="nav-link" href="#">Services</a>
-								</li>
-								<li class="nav-item">
-								  <a class="nav-link" href="#">Projects</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Contact</a>
-								  </li>
-							  </ul>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand ps-3"><h2>PORTFO<span>LIO</span></h2></a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#navbarOffcanvas"
+                    aria-controls="navbarOffcanvas"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="navbarOffcanvas"
+                    tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">PORTFO<span>LIO</span></h5>
+                        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">          
+                        <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                            <a href="mailto:helmutessien@gmail.com" class="let-talk-btn btn-action scrollto">Let's talk</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </nav>
+    </header>
 
-							  <a href="mailto:helmutessien@gmail.com" class="let-talk-btn scrollto">Let's talk</a>
-						</div>
-					  </div>
-				  </div>  
-				</div>
-			  </nav>
+    <main>
+        <section class="hero-section container-fluid p-5 my-5 bg-dark">
+            <div class="content">
+                <h4>Hello, my name is</h4>
+                <h1>Helmut <span>Felix</span> Essien</h1>
+                <h3>I am a Web Developer</h3>
+                 <a href="mailto:helmutessien@gmail.com" class="btn-action">Let's Talk</a>
+            </div>
+        </section>
 
-		<!-----Navigation Menu---->
-	</header>
+        <section class="about-section container-fluid p-5 my-5 bg-dark">
+            <div class="row">
+                <div class="col-sm">
+                    <img class="img-fluid" src="M12.jpg" srcset="M12-small.jpg 300w, M12-medium.jpg 600w, M12.jpg 1200w" sizes="(max-width: 300px) 300px, (max-width: 600px) 600px, 1200px" alt="Helmut Essien's portrait">
+                </div>
+                <div class="col-sm">
+                    <div class="about-text">
+                        <h2>About <span>Me</span></h2>
+                        <h5>Web Developer | Aspiring Software Architect</h5>
+                        <p>I am a passionate web developer with expertise in crafting scalable and dynamic web applications using ASP.NET Core and other modern technologies. With a focus on clean code, user-friendly interfaces, and efficient back-end solutions, I strive to deliver seamless digital experiences.</p>
+                        <p>Beyond coding, I am deeply committed to continuous learning and staying ahead in the ever-evolving tech landscape. Whether it's implementing innovative solutions or collaborating on complex projects, my ultimate goal is to grow as a capable and dependable software developer.</p>
+                        <p>When I'm not coding, you'll find me skateboarding, exploring basketball courts, or delving into video games for a creative recharge.</p>
+                        <button type="button" class="btn-action">Let's Talk</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-	<!---Hero Section---->
-	<div class="container-fluid p-5 my-5 bg-dark">
-		<div class="content">
-			<h4>Hello, my name is</h4>
-			<h1>Helmut <span>Felix</span> Essien</h1>
-			<h3>I am a Web Developer</h3>
-			<div class="newsletter">
-			  <form>
-				<input type="email" name="email" id="mail" placeholder="Enter your email">
-				<input type="submit" name="submit" value="Let's talk">
-			  </form>
-	  
-			</div>
-		  </div>
-		</div>
-	
-	
-
-		<div class="container-fluid p-5 my-5 bg-dark">
-			<div class="row">
-			  <div class="col-sm">
-				<img class="img-fluid" src="M12.jpg" />
-			  </div>
-			  <div class="col-sm">
-				<div class="about-text p-5 mt-4">
-					<h2>About <span>Me</span></h2>
-					<h5>Web Developer</h5>
-					<p>I am a full stack .NET web developer. I can provide clean code and pixel perfect design on the front-end and a simple and fast configurations on the back-end. I am a full stack .NET web developer. I can provide clean code and pixel perfect design on the front-end and a simple and fast configurations on the back-end. </p>
-					<button type="button">Let's Talk</button>
-				  </div>
-			  </div>
-		  </div>
-
-
-
-
-
-	<script src="bootstrap.bundle.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>

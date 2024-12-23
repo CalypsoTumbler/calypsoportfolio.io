@@ -1,193 +1,258 @@
 #header {
-	background: #000000;
+    background: #000000;
 }
-a{
+
+a {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     font-weight: 400;
 }
+
 span {
     color: #71e215;
 }
+
 .navbar {
     background-color: black;
 }
+
 .navbar-brand {
     font-size: 28px;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
 }
+
 .navbar-nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
 .navbar-nav {
     margin-bottom: 10px;
 }
+
 .nav-item {
     margin-right: 30px;
 }
-
-
-
-
 
 .nav-item::after {
     content: '';
     display: block;
     width: 0;
     height: 3px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    
     background:  #5c9f24;
     transition: width .3s;
 }
+
 .nav-link {
     color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
     font-weight: 400;
+    transition: color 0.3s, font-size 0.3s;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: #fff;
-    font-size: 18px;
-    transition: .3s;
+    font-size: 20px;
 }
 
 .nav-item:hover::after {
     width: 100%;
     transition: width .3s;
-    
 }
-.active .nav-link{
+
+.active .nav-link {
     color: #fff;
 }
+
 .active::after {
     content: '';
     display: block;
     width: 100%;
     height: 3px;
     background:  #5c9f24;
-    transition: width .3s;
 }
-.let-talk-btn {
-	background-color: #71e215;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 7px 15px 7px;
-    margin-top: 10px;
-	border-radius: 20px;
-	transition: .4s;
+
+.btn-action {
+    background-color: #71e215;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-radius: 30px;
+    transition: .4s;
 }
-.let-talk-btn:hover{
-	background-color: transparent;
-	color: white;
-	border: 2px solid #71e215;
-	cursor: pointer;
+
+.btn-action:hover {
+    background-color: transparent;
+    border-color: #FFCC00;
+    color: white;
 }
+
+.let-talk-btn, button {
+    @extend .btn-action;
+}
+
 .offcanvas {
     background-color: black;
 }
 
 /* Hero Section */
-.content{
-	padding-top: 15rem;
-	position: relative;
-	top: 50%;
-	left: 8%;
-	transform: translateY(-30%);
+.content {
+    padding-top: 15rem;
+    position: relative;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-30%);
 }
-.newsletter form{
-	width: 380px;
-	max-width: 100%;
-	position: relative;
+
+.newsletter form {
+    width: 380px;
+    max-width: 100%;
+    position: relative;
 }
-.newsletter form input:first-child{
-	display: inline-block;
-	width: 100%;
-	padding: 14px 130px 14px 15px;
-	border: 2px solid #FFCC00;
-	outline: none;
-	border-radius: 30px;
+
+.newsletter form input:first-child {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #FFCC00;
+    outline: none;
+    border-radius: 30px;
 }
-.newsletter form input:last-child{
-	position: absolute;
-	display: inline-block;
-	outline: none;
-	border: none;
-	padding: 10px 30px;
-	border-radius: 30px;
-	background-color: #71e215;
-	color: white;
-	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-	top: 6px;
-	right: 6px;
-	cursor: pointer;
+
+.newsletter form input:last-child {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #71e215;
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
 }
+
 .content h1 {
     color: white;
-	margin: 20px 0px 20px;
-	font-size: 55px;
+    margin: 20px 0px 20px;
+    font-size: 55px;
 }
+
 .content h3 {
     color: white;
-	font-size: 25px;
-	margin-bottom: 50px;
+    font-size: 25px;
+    margin-bottom: 50px;
 }
+
 .content h4 {
     color: #FAF5E9;
-	letter-spacing: 2px;
-	font-size: 20px;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
-.display-4 {
-	color: #fff;
-}
-.lead {
-	color: #fff;
-}
+
 .about-text {
-	width: 100%;
-	padding: 100px 0px;
+    width: 100%;
+    padding: 100px 0px;
+   
 }
-.about-text h2{
-	color: white;
-	font-size: 55px;
-	text-transform: capitalize;
-	margin-bottom: 20px;
+
+.about-text h2 {
+    color: white;
+    font-size: 55px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
-.about-text h5{
-	color: white;
-	letter-spacing: 2px;
-	font-size: 28px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
+
+.about-text h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
 }
-.about-text p{
-	color: #FAF5E9;
-	letter-spacing: 1px;
-	line-height: 28px;
-	font-size: 18px;
-	margin-bottom: 45px;
+
+.about-text p {
+    color: #FAF5E9;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
 }
-button{
-	background-color: #71e215;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 13px 30px;
-	border-radius: 30px;
-	transition: .4s;
+/* Styles for desktop view */
+@media (min-width: 992px) {
+    .col-sm img {
+        max-width: 60%; /* Adjust this value to make the image smaller */
+        margin: 0 auto; /* Center the image within the column if needed */
+        display: block;
+    }
+
+/* Styles for small mobile screens (max-width: 576px) */
+@media (max-width: 576px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability on small screens */
+    }
+
+    .content {
+        padding-top: 8rem; /* Reduce padding for hero section */
+        left: 5%;
+        transform: translateY(-20%); /* Adjust position */
+    }
+
+    .navbar {
+        padding: 10px; /* Reduce navbar padding */
+    }
+
+    .navbar-brand h2 {
+        font-size: 20px; /* Smaller brand name */
+    }
+
+    .nav-link {
+        font-size: 14px; /* Adjust navigation link size */
+    }
+
+    .about-section .about-text h2 {
+        font-size: 36px; /* Adjust heading size */
+    }
+
+    .about-text{
+    	padding-top: 15px;
+    }
+
+    .about-text p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+        line-height: 24px; /* Adjust line height */
+    }
+
+    .col-sm img {
+        max-width: 80%; /* Reduce image size for smaller screens */
+        margin: 0 auto; /* Center the image */
+        display: block;
+    }
+
+    .btn-action {
+        font-size: 14px; /* Smaller buttons */
+        padding: 8px 16px;
+    }
 }
-button:hover{
-	background-color: transparent;
-	border: 2px solid #FFCC00;
-	cursor: pointer;
+
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 10rem;
+        left: 5%;
+    }
+    .newsletter form {
+        width: 100%;
+    }
 }
