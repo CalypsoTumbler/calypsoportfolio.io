@@ -36,6 +36,28 @@ span {
     color: #fff;
 }
 
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: black; /* Reset the color to inherit the parent color */
+    background-color: transparent;
+    border: none; /* Remove the border */
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
 .navbar-nav ul {
     margin: 0;
     padding: 0;
@@ -85,7 +107,6 @@ span {
     display: block;
     width: 100%;
     height: 3px;
-    background: #5c9f24;
 }
 
 .offcanvas {
@@ -340,6 +361,135 @@ span {
 
     .service-desc {
         font-size: 0.9rem;
+    }
+}
+
+
+/* Projects Section */
+.projects-section {
+    padding: 3rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card {
+    background: transparent;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Fixed height for all cards */
+}
+
+/* Ensure the image in each project fits inside the card */
+.project-image {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1; /* This ensures the image takes up the available space */
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%; /* Makes the image stretch to fit the container */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.view-project {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #71e215;
+    padding: 10px 20px;
+    background: transparent;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+    .view-project:hover {
+        background: #71e215;
+        color: black;
+    }
+
+/* Ensure the project details are aligned correctly */
+.project-details {
+    padding: 20px 10px;
+    text-align: center;
+    flex-shrink: 0; /* Prevents the text from shrinking and maintains the layout */
+}
+
+.project-title {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #FAF5E9;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tech-pill {
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 30px;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 0.7rem;
     }
 }
 
