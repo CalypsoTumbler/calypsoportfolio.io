@@ -58,6 +58,37 @@ span {
     background-size: 100%;
 }
 
+.close-button-wrapper {
+    /* Style for the span if needed, e.g., positioning */
+    display: inline-block; /* or block, flex, etc., depending on layout needs */
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    /* Use your close icon as a background image */
+    background-image: url(menu-close-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    /* Ensure the button has a higher stacking context if needed */
+    position: relative;
+    z-index: 1000;
+}
+
+.btn-close-white {
+    /* Override any inherited filters */
+    filter: none !important;
+}
+
+.btn-close:hover, .btn-close:focus {
+    opacity: 0.7; /* Reduce opacity on hover or focus for the effect */
+    transition: opacity 0.3s ease; /* Smooth transition for the opacity change */
+}
+
 .navbar-nav ul {
     margin: 0;
     padding: 0;
@@ -143,6 +174,19 @@ span {
     .nav-link {
         font-size: 14px;
     }
+
+    .nav-item:hover::after {
+        width: 30%;
+    }
+    .active::after {
+        width: 30%;
+     }
+
+    .btn-action{
+        margin-top: 30px;
+    }
+
+
 }
 
 /* Hero Section */
@@ -430,6 +474,9 @@ span {
 .project-card.in-view .overlay {
     opacity: 1;
 }
+.project-card.in-view .project-image img {
+    transform: scale(1.1);
+}
 
 
 
@@ -462,7 +509,7 @@ span {
 @media (hover: none) {
     .project-card.in-view {
         animation: pulse 0.5s infinite alternate;
-        transform: scale(1.05);
+        /*transform: scale(1.05);*/
     }
 
     /*@keyframes pulse {
