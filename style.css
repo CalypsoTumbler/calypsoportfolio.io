@@ -445,7 +445,7 @@ span {
         transform: scale(1.05);
     }
 
-    @keyframes pulse {
+    /*@keyframes pulse {
         from {
             box-shadow: 0 0 10px #71e215;
         }
@@ -453,7 +453,7 @@ span {
         to {
             box-shadow: 0 0 20px #71e215;
         }
-    }
+    }*/
 }
 
 /* Ensure the project details are aligned correctly */

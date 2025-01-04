@@ -257,30 +257,38 @@
         // scripts.js
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Media query for detecting hover capability
             const hoverMediaQuery = window.matchMedia('(hover: none)');
 
-            // Check if the device does not support hover
             if (hoverMediaQuery.matches) {
                 const projects = document.querySelectorAll('.project-card');
+                let currentInView = null; // Keep track of the current card in view
 
                 const observer = new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            // Add 'in-view' class when visible
+                            // Remove 'in-view' class from previous card if it exists
+                            if (currentInView && currentInView !== entry.target) {
+                                currentInView.classList.remove('in-view');
+                                /*currentInView.classList.remove('pulse');*/
+                            }
+
+                            // Add 'in-view' class to the new card
                             entry.target.classList.add('in-view');
+                            /*entry.target.classList.add('pulse');*/
 
-                            // Add a temporary class for a visual feedback pulse effect
-                            entry.target.classList.add('pulse');
-                            setTimeout(() => {
-                                entry.target.classList.remove('pulse');
-                            }, 1000); // Remove after 1 second to avoid continuous pulsing
-
-                            observer.unobserve(entry.target); // Stop observing once visible
+                            // Update currentInView to the new card
+                            currentInView = entry.target;
+                        } else {
+                            // If the card is no longer in view, remove the class
+                            if (entry.target === currentInView) {
+                                entry.target.classList.remove('in-view');
+                                /*entry.target.classList.remove('pulse');*/
+                                currentInView = null; // Reset if the last card in view exits
+                            }
                         }
                     });
                 }, {
-                    threshold: 0.6, // Trigger when 20% of the element is visible
+                    threshold: 0.7, // Trigger when 70% of the element is visible
                 });
 
                 // Observe each project card
