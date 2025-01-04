@@ -405,7 +405,11 @@ span {
         transition: transform 0.3s ease;
     }
 
-.project-card .overlay {
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -419,9 +423,15 @@ span {
     align-items: center;
 }
 
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
 .project-card.in-view .overlay {
     opacity: 1;
 }
+
+
 
 .view-project {
     color: #fff;
@@ -433,6 +443,16 @@ span {
     transition: background 0.3s, color 0.3s;
 }
 
+    .view-project:hover {
+        background: #71e215;
+        color: black;
+    }
+
+/*.project-card:hover .view-project {
+    background: #71e215;
+    color: black;
+}
+*/
 .project-card.in-view .view-project {
     background: #71e215;
     color: black;
@@ -504,6 +524,42 @@ span {
     }
     /* Further smaller screen styles */
 }
+
+/* Contact Section */
+.contact-main-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact-main-title {
+        font-size: 2rem;
+    }
+    /* Further mobile-specific styles */
+}
+
+@media (max-width: 576px) {
+    .contact-main-title {
+        font-size: 1.8rem;
+    }
+    /* Further smaller screen styles */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Media Queries for Images */
