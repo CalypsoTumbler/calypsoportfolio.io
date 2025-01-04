@@ -258,16 +258,24 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             // Media query for detecting hover capability
-            const hoverMediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+            const hoverMediaQuery = window.matchMedia('(hover: none)');
 
             // Check if the device does not support hover
-            if (!hoverMediaQuery.matches) {
+            if (hoverMediaQuery.matches) {
                 const projects = document.querySelectorAll('.project-card');
 
                 const observer = new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.add('in-view'); // Add 'in-view' class when visible
+                            // Add 'in-view' class when visible
+                            entry.target.classList.add('in-view');
+
+                            // Add a temporary class for a visual feedback pulse effect
+                            entry.target.classList.add('pulse');
+                            setTimeout(() => {
+                                entry.target.classList.remove('pulse');
+                            }, 1000); // Remove after 1 second to avoid continuous pulsing
+
                             observer.unobserve(entry.target); // Stop observing once visible
                         }
                     });
