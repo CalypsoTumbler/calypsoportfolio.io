@@ -366,6 +366,12 @@ span {
 
 
 /* Projects Section */
+.project-main-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
 .projects-section {
     padding: 3rem 1.5rem;
     position: relative;
@@ -469,7 +475,20 @@ span {
     font-size: 0.8rem;
 }
 
+/* Screentouch devices */
+.project-card.in-view .overlay {
+    opacity: 1; /* Makes overlay visible when in view */
+}
+
+.project-card.in-view .view-project {
+    background: #71e215;
+    color: black;
+}
+
 @media (max-width: 768px) {
+    .project-main-title {
+        font-size: 2rem;
+    }
     .project-card {
         margin-bottom: 30px;
     }
@@ -484,6 +503,9 @@ span {
 }
 
 @media (max-width: 576px) {
+    .project-main-title {
+        font-size: 1.8rem;
+    }
     .project-title {
         font-size: 1rem;
     }
